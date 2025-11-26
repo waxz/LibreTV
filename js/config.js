@@ -22,12 +22,349 @@ const SITE_CONFIG = {
 
 // API站点配置
 const API_SITES = {
-    testSource: {
-        api: 'https://www.example.com/api.php/provide/vod',
-        name: '空内容测试源',
-        adult: true
-    }
-    //ARCHIVE https://telegra.ph/APIs-08-12
+    // ========== 优质资源站 ==========
+    heimuer: {
+        api: 'https://json.heimuer.xyz/api.php/provide/vod',
+        name: '黑木耳资源',
+        detail: 'https://heimuer.tv',
+    },
+    
+    ffzy: {
+        api: 'https://cj.ffzyapi.com/api.php/provide/vod',
+        name: '非凡资源',
+        detail: 'http://ffzy5.tv',
+    },
+    
+    liangzi: {
+        api: 'https://cj.lziapi.com/api.php/provide/vod',
+        name: '量子资源',
+    },
+    
+    bfzy: {
+        api: 'https://bfzyapi.com/api.php/provide/vod',
+        name: '暴风资源',
+    },
+    
+    // ========== 主流资源站 ==========
+    iqiyi: {
+        api: 'https://www.iqiyizyapi.com/api.php/provide/vod',
+        name: 'iQiyi资源',
+    },
+    
+    baidu: {
+        api: 'https://api.apibdzy.com/api.php/provide/vod',
+        name: '百度云资源',
+    },
+    
+    zy360: {
+        api: 'https://360zy.com/api.php/provide/vod',
+        name: '360资源',
+    },
+    
+    // ========== 速度类 ==========
+    jisu: {
+        api: 'https://jszyapi.com/api.php/provide/vod',
+        name: '极速资源',
+        detail: 'https://jszyapi.com',
+    },
+    
+    feisu: {
+        api: 'https://www.feisuzyapi.com/api.php/provide/vod',
+        name: '飞速资源',
+    },
+    
+    guangsu: {
+        api: 'http://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8',
+        name: '光速资源',
+    },
+    
+    shandian: {
+        api: 'http://sdzyapi.com/api.php/provide/vod',
+        name: '闪电资源',
+    },
+    
+    // ========== 动漫/特色资源 ==========
+    yinghua: {
+        api: 'https://m3u8.apiyhzy.com/api.php/provide/vod',
+        name: '樱花资源',
+    },
+    
+    xiaomaomi: {
+        api: 'https://zy.xmm.hk/api.php/provide/vod',
+        name: '小猫咪资源',
+    },
+    
+    ikun: {
+        api: 'https://ikunzyapi.com/api.php/provide/vod',
+        name: 'iKun资源',
+    },
+    
+    // ========== 综合资源站 ==========
+    wolong: {
+        api: 'https://wolongzyw.com/api.php/provide/vod',
+        name: '卧龙资源',
+    },
+    
+    hwba: {
+        api: 'https://cjhwba.com/api.php/provide/vod',
+        name: '华为吧资源',
+    },
+    
+    dbzy: {
+        api: 'https://dbzy.tv/api.php/provide/vod',
+        name: '豆瓣资源',
+    },
+    
+    mozhua: {
+        api: 'https://mozhuazy.com/api.php/provide/vod',
+        name: '魔爪资源',
+    },
+    
+    modu: {
+        api: 'https://caiji.moduapi.cc/api.php/provide/vod',
+        name: '魔都资源',
+    },
+    
+    zuida: {
+        api: 'http://zuidazy.me/api.php/provide/vod',
+        name: '最大资源',
+    },
+    
+    // ========== 特色站点 ==========
+    wujin: {
+        api: 'https://api.wujinapi.com/api.php/provide/vod',
+        name: '无尽资源',
+    },
+    
+    wwzy: {
+        api: 'https://wwzy.tv/api.php/provide/vod',
+        name: '旺旺短剧',
+    },
+    
+    haiwaikan: {
+        api: 'https://haiwaikan.com/api.php/provide/vod',
+        name: '海外看资源🪜',
+    },
+    
+    niuniu: {
+        api: 'https://api.niuniuzy.me/api.php/provide/vod',
+        name: '牛牛资源',
+    },
+    
+    yaya: {
+        api: 'https://cj.yayazy.net/api.php/provide/vod',
+        name: '丫丫资源',
+    },
+    
+    // ========== 电影站 ==========
+    dyttzy: {
+        api: 'http://caiji.dyttzyapi.com/api.php/provide/vod',
+        name: '电影天堂资源',
+        detail: 'http://caiji.dyttzyapi.com',
+    },
+    
+    piaohua: {
+        api: 'http://www.ahjiuman.com/api.php/provide/vod/at/json',
+        name: '飘花资源',
+    },
+    
+    piaoling: {
+        api: 'https://p2100.net/api.php/provide/vod',
+        name: '飘零资源',
+    },
+    
+    // ========== 其他资源 ==========
+    ruyi: {
+        api: 'https://cj.rycjapi.com/api.php/provide/vod',
+        name: '如意资源',
+    },
+    
+    tyyszy: {
+        api: 'https://tyyszy.com/api.php/provide/vod',
+        name: '天涯资源',
+    },
+    
+    tiankong: {
+        api: 'http://m3u8.tiankongapi.com/api.php/provide/vod/from/tkm3u8',
+        name: '天空资源',
+    },
+    
+    tianyi: {
+        api: 'https://www.911ysw.top/tianyi.php/provide/vod',
+        name: '天翼资源',
+    },
+    
+    qiqi: {
+        api: 'https://www.qiqidys.com/api.php/provide/vod',
+        name: '七七资源',
+    },
+    
+    hongniu: {
+        api: 'https://www.hongniuzy2.com/api.php/provide/vod',
+        name: '红牛资源',
+    },
+    
+    jinying: {
+        api: 'http://jyzyapi.com/provide/vod/from/jinyingm3u8',
+        name: '金鹰资源',
+    },
+    
+    kuache: {
+        api: 'https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8',
+        name: '快车资源',
+    },
+    
+    kuaiikan: {
+        api: 'https://www.kuaikan-api.com/api.php/provide/vod',
+        name: '快看资源',
+    },
+    
+    kuaiyun: {
+        api: 'https://www.kuaiyunzy.com/api.php/provide/vod',
+        name: '快云资源',
+    },
+    
+    uku: {
+        api: 'https://api.ukuapi.com/api.php/provide/vod',
+        name: 'U酷资源',
+    },
+    
+    haohua: {
+        api: 'https://hhzyapi.com/api.php/provide/vod',
+        name: '豪华资源',
+    },
+    
+    huya: {
+        api: 'https://www.huyaapi.com/api.php/provide/vod',
+        name: '虎牙资源',
+    },
+    
+    sijiu: {
+        api: 'https://49zyw.com/api.php/provide/vod',
+        name: '四九资源',
+    },
+    
+    suoni: {
+        api: 'https://suoniapi.com/api.php/provide/vod',
+        name: '索尼资源',
+    },
+    
+    subo: {
+        api: 'https://subocaiji.com/api.php/provide/vod',
+        name: '速博资源',
+    },
+    
+    xiongzhang: {
+        api: 'https://xzcjz.com/api.php/provide/vod',
+        name: '熊掌资源',
+    },
+    
+    xinlang: {
+        api: 'https://api.xinlangapi.com/xinlangapi.php/provide/vod',
+        name: '新浪资源',
+    },
+    
+    qihu: {
+        api: 'https://caiji.qhzyapi.com/api.php/provide/vod',
+        name: '奇虎资源',
+    },
+    
+    // ========== 小众/特殊 ==========
+    beidouxing: {
+        api: 'http://m3u8.bdxzyapi.com/api.php/provide/vod',
+        name: '北斗星资源',
+    },
+    
+    aosika: {
+        api: 'http://aosikazy.com/api.php/provide/vod',
+        name: '奥斯卡资源',
+    },
+    
+    laoya: {
+        api: 'http://api.apilyzy.com/api.php/provide/vod',
+        name: '老鸭资源',
+    },
+    
+    kudian: {
+        api: 'http://kudian10.com/api.php/provide/vod',
+        name: '酷点资源',
+    },
+    
+    tangrenjie: {
+        api: 'http://tangrenjie.tv/api.php/provide/vod',
+        name: '唐人街资源',
+    },
+    
+    senlin: {
+        api: 'http://slapibf.com/api.php/provide/vod',
+        name: '森林资源',
+    },
+    
+    yingku: {
+        api: 'http://api.ykapi.net/api.php/provide/vod',
+        name: '影库资源',
+    },
+    
+    tantan: {
+        api: 'http://apittzy.com/api.php/provide/vod',
+        name: '探探资源',
+    },
+    
+    aidan: {
+        api: 'http://lovedan.net/api.php/provide/vod',
+        name: '艾旦影视',
+    },
+    
+    siwa: {
+        api: 'http://siwazyw.cc/api.php/provide/vod',
+        name: '丝袜资源',
+    },
+    
+    // ========== 区域/本地 ==========
+    citong: {
+        api: 'http://ys9.cttv.vip/api.php/provide/vod',
+        name: '刺桐资源',
+    },
+    
+    youzhi: {
+        api: 'http://api.1080zyku.com/inc/api.php/provide/vod',
+        name: '优质资源库',
+    },
+    
+    sanshijiu: {
+        api: 'http://39kan.com/api.php/provide/vod',
+        name: '39影视',
+    },
+    
+    tiantang: {
+        api: 'http://vipmv.cc/api.php/provide/vod',
+        name: '天堂资源',
+    },
+    
+    lehuo: {
+        api: 'http://lehootv.com/api.php/provide/vod',
+        name: '乐活影视',
+    },
+    
+    kaifang: {
+        api: 'http://vod-demo.onrender.com/pubdovod.php',
+        name: '开放电影',
+    },
+    
+    wangmin: {
+        api: 'http://prinevillesda.org/api.php/provide/vod',
+        name: '网民电影',
+    },
+    
+    yeyu: {
+        api: 'https://yyff.540734621.xyz/api.php/provide/vod',
+        name: '业余资源',
+    },
+    
+    xiaohuangren: {
+        api: 'https://iqyi.xiaohuangrentv.com/api.php/provide/vod',
+        name: '小黄人资源',
+    },
 };
 
 // 定义合并方法
